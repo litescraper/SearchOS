@@ -52,6 +52,11 @@
   🎬 <b><a href="https://youtu.be/wxy74AqykwY">Full product walkthrough (English)</a></b>
 </p>
 
+The Serper search backend accepts `SERPER_BASE_URL` (default:
+`https://google.serper.dev`, without `/search`) and the corresponding provider's
+`SERPER_API_KEY`. Trailing slashes are removed before adding `/search`.
+Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others).
+
 > **▶️ Quick run:**
 >
 > ```bash

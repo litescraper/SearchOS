@@ -17,6 +17,9 @@ class SerperProvider(SearchProvider):
 
     def __init__(self, api_key: str = "") -> None:
         self._api_key = api_key or os.environ.get("SERPER_API_KEY", "")
+        self.ENDPOINT = (
+            f"{os.getenv('SERPER_BASE_URL', 'https://google.serper.dev').rstrip('/')}/search"
+        )
 
     @property
     def name(self) -> str:

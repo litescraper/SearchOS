@@ -194,7 +194,7 @@ class Search(BaseTool):
         def contains_chinese_basic(text: str) -> bool:
             return any('\u4E00' <= char <= '\u9FFF' for char in text)
 
-        url = "https://google.serper.dev/search"
+        url = f'{os.getenv("SERPER_BASE_URL", "https://google.serper.dev").rstrip("/")}/search'
         
         payload_dict = {"q": query}
         if contains_chinese_basic(query):
